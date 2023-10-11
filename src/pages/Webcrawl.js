@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Header from "../Component/Header.js";
 import Whois from "../Component/Whois.js";
@@ -6,6 +7,7 @@ import "../Component/Web.css"; // Import your CSS file
 import Ssl from "../Component/SSL.js";
 import Mail from "../Component/MAILa.js";
 import Crawl from "../Component/Crawler.js"
+import { Link } from "react-router-dom";
 
 const Webcrawl = () => {
   const [ispopupOpen, setIspopupOpen] = useState(false);
@@ -112,9 +114,7 @@ const Webcrawl = () => {
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">→</span>
-          </a>
+         
         </div>
       </nav>
       <div className="lg:hidden" role="dialog" aria-modal="true">
@@ -154,37 +154,32 @@ const Webcrawl = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="index"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Homne
                 </a>
                 <a
-                  href="about"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </a>
                 <a
-                  href="blog"
+                  href="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
                 </a>
                 <a
-                  href="contact"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+                
               </div>
             </div>
           </div>
@@ -237,29 +232,7 @@ const Webcrawl = () => {
       </button>
       <Ssl isOpen={ispopupOpenSSL} onRequestClose={closepopupSSL} />
         </div>
-        {/* <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-          <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-            Directory Bursting
-          </h2>
-          <p className="leading-relaxed text-base mb-4">
-            Directory bursting is very useful in the website because it give the
-            all the detail of the directories
-          </p>
-          <a className="text-indigo-500 inline-flex items-center">
-            Try Now.....
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              className="w-4 h-4 ml-2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div> */}
+       
         <div className="xl:w-1/3 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
           <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
             WHOIS
@@ -308,12 +281,12 @@ const Webcrawl = () => {
         </div>
         
       </div>
-      <button
-        href="/"
-        className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-      >
-        Home
-      </button>
+          <button
+
+            className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
+            <Link to="/">Home</Link>
+          </button>
     </div>
   </section>
   <footer className="text-gray-600 body-font ">
@@ -334,15 +307,8 @@ const Webcrawl = () => {
         <span className="ml-3 text-xl ">EyeSint Tool</span>
       </a>
       <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 ">
-        © 2023 G5 —
-        <a
-          href="https://twitter.com/knyttneve "
-          className="text-gray-600 ml-1 "
-          rel="noopener noreferrer "
-          target="_blank "
-        >
-          @Cyber Geeks
-        </a>
+         G5 
+       
       </p>
     </div>
   </footer>

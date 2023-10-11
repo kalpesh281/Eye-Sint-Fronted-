@@ -6,6 +6,7 @@ import "../Component/Web.css"; // Import your CSS file
 import Phone from "../Component/Phonenum.js";
 import Name from "../Component/Name.js";
 import Pdf from "../Component/Pdf.js"
+import { Link } from "react-router-dom";
 
 const PersonFoot = () => {
     const [ispopupOpenC, setIspopupOpenC] = useState(false);
@@ -79,34 +80,32 @@ const PersonFoot = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           <a
-            href="index.html"
+            href="/"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Home
           </a>
           <a
-            href="about.html"
+            href="/about"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             About
           </a>
           <a
-            href="blog.html"
+            href="/blog"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Blog
           </a>
           <a
-            href="contact.html"
+            href="/contact"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Contact
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">→</span>
-          </a>
+          
         </div>
       </nav>
       {/* Mobile menu, show/hide based on menu open state. */}
@@ -148,25 +147,25 @@ const PersonFoot = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="index.html"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Homne
                 </a>
                 <a
-                  href="about.html"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </a>
                 <a
-                  href="blog.html"
+                  href="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
                 </a>
                 <a
-                  href="contact.html"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
@@ -257,10 +256,10 @@ const PersonFoot = () => {
         </div>
       </div>
       <button
-        href="index.html"
+        
         className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
       >
-        Home
+        <Link to="/">Home</Link>
       </button>
     </div>
   </section>
@@ -282,15 +281,8 @@ const PersonFoot = () => {
         <span className="ml-3 text-xl ">EyeSint Tool</span>
       </a>
       <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 ">
-        © 2023 G5 —
-        <a
-          href="https://twitter.com/knyttneve "
-          className="text-gray-600 ml-1 "
-          rel="noopener noreferrer "
-          target="_blank "
-        >
-          @Cyber Geeks
-        </a>
+         G5 
+        
       </p>
       
     </div>
